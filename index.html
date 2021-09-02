@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Archive</title>
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body class="bg-secondary">
+    
+    <h1 class="text-center text-info m-5">Search Books for Buy.</h1>
+
+    <div class="input-group mb-3 w-50 mx-auto ">
+        <input id="input-search" type="text" class="form-control" placeholder="Search Book" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button onclick="searchBook()" class="btn btn-primary" type="button" id="button-search">Search</button>
+
+        <!-- error field -->
+        <div class="container">
+            <div id="error" class="text-danger bg-light d-inline-block  fw-bold mt-2"></div>
+        </div>
+        <div class="container">
+            <div id="errorNoFound" class="text-danger fw-bold"></div>
+        </div>
+        </div>
+         <!-- search result  -->
+        <div class="container mb-5">
+            <div id="total-result" class="text-success bg-light fw-bold w-75 mx-auto"> </div>
+        </div>
+        
+    </div>
+   
+    
+    <!-- Book search result -->
+    <div class="container books-container">
+        <div id="search-result"  class="row row-cols-1 row-cols-md-3 g-4">
+             
+        </div>
+    </div>
+
+
+
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>
